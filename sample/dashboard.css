@@ -1,0 +1,57 @@
+/* Basic reset for page */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Ensure the body takes the full height */
+}
+
+/* Center content */
+.dashboard-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto; /* Centers the container with some margin from the top */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center; /* Centers the content inside the container */
+}
+
+/* Dashboard title */
+.dashboard-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Displaying the table */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders of cells are merged */
+    margin: 0 auto; /* Centers the table horizontally */
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; /* Moved border to table cell level */
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+/* Link styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #45a049;
+}
