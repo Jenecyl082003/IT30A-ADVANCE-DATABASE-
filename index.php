@@ -8,7 +8,6 @@
 <body>
 
 <div class="container">
-    <!-- Login Form -->
     <div id="login-form">
         <h2>Login</h2>
         <form action="sample/databases/login.php" method="post">
@@ -19,7 +18,7 @@
         <p><a href="javascript:void(0);" onclick="toggleForms()">Register if you don't have an account</a></p>
     </div>
 
-    <!-- Register Form -->
+
     <div id="register-form" style="display: none;">
         <h2>Register</h2>
         <form action="sample/databases/register.php" method="post">

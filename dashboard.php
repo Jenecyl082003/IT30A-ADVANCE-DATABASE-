@@ -1,23 +1,19 @@
 <?php
-// Include config.php to access the PDO object
-include 'sample/databases/config.php'; // Adjusted include path
+include 'sample/databases/config.php'; 
 
 session_start();
 
-// Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../../index.php"); // Redirect to login if not logged in
+    header("Location: ../../index.php");
     exit;
 }
 
-// Fetch all user and profile information using LEFT JOIN
 $stmt = $pdo->prepare("SELECT u.user_id, u.fullname, u.username, u.email, u.phone_number, p.profile_id
                        FROM users u
                        LEFT JOIN profiles p ON u.user_id = p.user_id");
 $stmt->execute();
-$users = $stmt->fetchAll(); // Fetch all user records
+$users = $stmt->fetchAll();
 
-// If no data found, you can handle it here or redirect
 if (!$users) {
     echo "No user data found.";
     exit;
@@ -34,9 +30,8 @@ if (!$users) {
 <body>
 
 <div class="dashboard-container">
-    <h2>Dashboard - All User Information</h2>
+    <h2>Dashboard</h2>
 
-    <!-- Displaying all user data in a single table -->
     <table>
         <thead>
             <tr>
